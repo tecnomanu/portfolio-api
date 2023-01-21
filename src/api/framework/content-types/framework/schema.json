@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "frameworks",
+  "info": {
+    "singularName": "framework",
+    "pluralName": "frameworks",
+    "displayName": "Frameworks",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "Image": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "Icon": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "portofolios": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::portofolio.portofolio",
+      "mappedBy": "frameworks"
+    },
+    "language": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::language.language",
+      "inversedBy": "frameworks"
+    },
+    "knowledge": {
+      "type": "integer",
+      "default": 0,
+      "required": false,
+      "max": 100,
+      "min": 0
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "success",
+        "warning",
+        "danger",
+        "info",
+        "light",
+        "dark",
+        "primary",
+        "secondary"
+      ],
+      "default": "success",
+      "required": true
+    }
+  }
+}

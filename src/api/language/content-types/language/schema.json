@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "languages",
+  "info": {
+    "singularName": "language",
+    "pluralName": "languages",
+    "displayName": "Languages",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "icon": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "image": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "frameworks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::framework.framework",
+      "mappedBy": "language"
+    }
+  }
+}
