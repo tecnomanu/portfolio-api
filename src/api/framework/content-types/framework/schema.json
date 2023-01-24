@@ -12,22 +12,22 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string",
       "pluginOptions": {}
     },
-    "Image": {
+    "image": {
       "type": "string",
       "pluginOptions": {}
     },
-    "Icon": {
+    "icon": {
       "type": "string",
       "pluginOptions": {}
     },
-    "portofolios": {
+    "portfolios": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::portofolio.portofolio",
+      "target": "api::portfolio.portfolio",
       "mappedBy": "frameworks"
     },
     "language": {
